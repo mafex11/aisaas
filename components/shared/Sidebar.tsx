@@ -23,7 +23,7 @@ const Sidebar = () => {
                 <ul className="sidebar-nav_elements">
 
                     {navLinks.slice(0,6).map((link)=> {
-                        const isActive = link.route ===pathname
+                        const isActive = link.route === pathname
 
                         return (
                             <li key={link.route} className={`sidebar-nav_element group  ${isActive ? 'bg-purple-gradient text-white' : 'text-gray-700'}`}>
