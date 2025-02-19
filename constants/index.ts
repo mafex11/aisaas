@@ -40,7 +40,7 @@ export const navLinks = [
       icon: "/assets/icons/bag.svg",
     },
   ];
-  
+
   export const plans = [
     {
       _id: 1,
@@ -118,7 +118,7 @@ export const navLinks = [
       ],
     },
   ];
-  
+
   export const transformationTypes = {
     restore: {
       type: "restore",
@@ -160,7 +160,7 @@ export const navLinks = [
       icon: "filter.svg",
     },
   };
-  
+
   export const aspectRatioOptions = {
     "1:1": {
       aspectRatio: "1:1",
@@ -181,7 +181,7 @@ export const navLinks = [
       height: 1778,
     },
   };
-  
+
   export const defaultValues = {
     title: "",
     aspectRatio: "",
@@ -189,5 +189,5 @@ export const navLinks = [
     prompt: "",
     publicId: "",
   };
-  
+
   export const creditFee = -1;
