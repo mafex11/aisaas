@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@clerk/clerk-sdk-node": "^5.1.6",
     "@clerk/nextjs": "^6.10.3",
     "@radix-ui/react-dialog": "^1.1.5",
     "@radix-ui/react-slot": "^1.1.1",
@@ -21,6 +22,7 @@
     "qs": "^6.14.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
+    "svix": "^1.57.0",
     "tailwind-merge": "^2.6.0",
     "tailwindcss-animate": "^1.0.7"
   },
