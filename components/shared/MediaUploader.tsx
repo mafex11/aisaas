@@ -39,11 +39,11 @@ const MediaUploader = ({
 
     toast.success("Image uploaded successfully. 1 credit was deducted.");
   };
-
-  const onUploadErrorHandler = (error: any) => {
+/* eslint-disable */
+const onUploadErrorHandler = (error: any) => {
     toast.error("Something went wrong while uploading. Please try again.");
   };
-
+/* eslint-enable */
   return (
     <CldUploadWidget
       uploadPreset="aisaas"

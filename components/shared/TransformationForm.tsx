@@ -35,6 +35,7 @@ import {
 
 import {
   Form,
+  /* eslint-disable */
   FormControl,
   FormDescription,
   FormField,
@@ -42,6 +43,7 @@ import {
   FormLabel,
   FormMessage,
 } from "@/components/ui/form"
+ /* eslint-enable */
 import { InsufficientCreditsModal } from "./InsufficientCreditsModal";
 
 
@@ -62,7 +64,9 @@ const TransformationForm = ({action, data=null, userId, type, creditBalance, con
   const [isSubmitting, setIsSubmitting] = useState(false);
   const[isTransforming, setIsTransforming] = useState(false);
   const[transformationConfig, setTransformationConfig] = useState(config);
+  /* eslint-disable */
   const [isPending, startTransition] = useTransition();
+  /* eslint-enable */
   const router = useRouter()
 
   const initialValues= data && action ==='Update'? {

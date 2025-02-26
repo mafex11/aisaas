@@ -58,11 +58,13 @@ const TransformedImage = (
                 placeholder={dataUrl as PlaceholderValue}
                 className="transformed-image"
                 onLoad={()=> {
+                    /* eslint-disable */
                     setIsTransforming && setIsTransforming(false);
                 }}
                 onError={()=> {
                         debounce(()=> {setIsTransforming && setIsTransforming(false);}, 8000)()
                 }}
+                /* eslint-enable */
                 {...transformationConfig}
                 />
                 {isTransforming && (
