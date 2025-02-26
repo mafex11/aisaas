@@ -1,4 +1,5 @@
 /* eslint-disable prefer-const */
+
 import { type ClassValue, clsx } from "clsx";
 import qs from "qs";
 import { twMerge } from "tailwind-merge";
@@ -85,25 +86,14 @@ export function removeKeysFromQuery({
 
 // DEBOUNCE
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
-export const debounce = <F extends (...args: any[]) => void>(
-  func: F,
-  delay: number
-): ((...args: Parameters<F>) => void) => {
+export const debounce = (func: (...args: any[]) => void, delay: number) => {
   let timeoutId: NodeJS.Timeout | null;
-  return (...args) => {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  return (...args: any[]) => {
     if (timeoutId) clearTimeout(timeoutId);
     timeoutId = setTimeout(() => func(...args), delay);
   };
 };
-
-// export const debounce = (func: (...args: any[]) => void, delay: number) => {
-//   let timeoutId: NodeJS.Timeout | null;
-//   // eslint-disable-next-line @typescript-eslint/no-explicit-any
-//   return (...args: any[]) => {
-//     if (timeoutId) clearTimeout(timeoutId);
-//     timeoutId = setTimeout(() => func.apply(null, args), delay);
-//   };
-// };
 
 // GE IMAGE SIZE
 export type AspectRatioKey = keyof typeof aspectRatioOptions;
